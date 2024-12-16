@@ -40,19 +40,24 @@ public class Point2D
   // Additional methods
   public String toString()
   {
-    return "(" + x = ", " + y + ")";
+    String result = "(" + x + " =" + ", " + y + ")";
+    return result;
   }
 
   // Returns the distance from the origin to this point
   public double dist()
   {
-    return 0.0;
+    double distX = Math.pow(x, 2);
+    double distY = Math.pow(y, 2);
+    return Math.sqrt(distX + distY);
   }
 
   // Overload of dist() method
   // Returns the distance from this point to Point2D other
   public double dist(Point2D other)
   {
-    return 0.0;
+    double distX = Math.pow((other.x-x), 2);
+    double distY = Math.pow((other.y-y), 2);
+    return Math.sqrt(distX + distY);
   }
 }
